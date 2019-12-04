@@ -18,10 +18,75 @@ class Scaffold_deneme extends StatelessWidget{
         ],
     ),
     body:new Center(
-      child: new Text("Merhaba Scaffold",
-      textDirection: TextDirection.ltr,
-      ),
-      ),
+      child: new GridView.count(
+        primary: false,
+        crossAxisSpacing: 10.0,
+        crossAxisCount: 2,
+        children: <Widget>[
+          new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),
+          new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),new Container(
+            color: Colors.blue.shade100,
+            margin: EdgeInsets.all(5.0),
+            alignment: Alignment.center,
+            child: new Text('Grid elemanı'
+           // textAlign: TextAlign.center,
+           ),
+          ),
+        ],
+      ),),
+      //child: new Text("Merhaba Scaffold",
+     // textDirection: TextDirection.ltr,
+     // ),
+     // ),
       bottomNavigationBar: new BottomNavigationBar(
         items: [
           new BottomNavigationBarItem(
@@ -37,7 +102,31 @@ class Scaffold_deneme extends StatelessWidget{
             title:new Text("Değerlendirme"),
           ),
         ],
-        onTap: (int i)=> debugPrint("Tikladiğiniz butonun indeksi : $i"),
+        onTap: (int i){
+          switch(i){
+            case 0:
+            print("Tikladiğiniz buton arsive butonudur.");
+            break;
+            case 1:
+            print("Tikladiğiniz buton bilgilendirme butonudur.");
+            break;
+            case 2:
+            print("Tikladiğiniz buton degerlendirme butonudur.");
+            break;
+            default:
+            print("Boyle bir buton yoktur.");
+            break;
+          }
+        },
+      ),
+      drawer: new Drawer(
+        child:new ListTile(
+          leading: Icon(Icons.change_history),
+          title: Text('Change history'),
+          onTap: (){
+            Navigator.pop(context);
+          },
+        ),
       ),
     );
   }
