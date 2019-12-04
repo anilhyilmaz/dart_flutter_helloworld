@@ -20,7 +20,25 @@ class Scaffold_deneme extends StatelessWidget{
     body:new Center(
       child: new Text("Merhaba Scaffold",
       textDirection: TextDirection.ltr,
-      ),)
+      ),
+      ),
+      bottomNavigationBar: new BottomNavigationBar(
+        items: [
+          new BottomNavigationBarItem(
+            icon: new Icon(Icons.archive),
+            title:new Text("Archive"),
+          ),
+          new BottomNavigationBarItem(
+            icon: new Icon(Icons.announcement),
+            title:new Text("Bilgilendirme"),
+          ),
+          new BottomNavigationBarItem(
+            icon: new Icon(Icons.assessment),
+            title:new Text("Değerlendirme"),
+          ),
+        ],
+        onTap: (int i)=> debugPrint("Tikladiğiniz butonun indeksi : $i"),
+      ),
     );
   }
 
