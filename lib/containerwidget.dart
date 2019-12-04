@@ -10,8 +10,8 @@ class Mycontainerwidget extends StatelessWidget{
       child: new Container(
         color:Colors.yellow,
         alignment: Alignment.center,
-        margin: EdgeInsets.all(10.0),
-        padding: EdgeInsets.all(1.0),
+          margin: EdgeInsets.all(10.0),
+         padding: EdgeInsets.all(1.0),
         child:new Text("Hello World",
         textDirection: TextDirection.ltr),
     ));
